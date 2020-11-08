@@ -1,7 +1,7 @@
-import { Game } from './game.model';
+import { GameModel } from "./game.model";
 
-describe('Game', () => {
-  it('should create an instance', () => {
-    expect(new Game()).toBeTruthy();
+describe("GameModel", () => {
+  it("should create an instance", () => {
+    expect(new GameModel()).toBeTruthy();
   });
 });

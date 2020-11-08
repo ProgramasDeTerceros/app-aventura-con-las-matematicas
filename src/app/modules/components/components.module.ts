@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
+
+import { PipesModule } from "src/app/shared/pipes/pipes.module";
 import { AppRoutingModule } from "src/app/app-routing.module";
 import { GameCardComponent } from "./card/game-card/game-card.component";
 import { GameListCardComponent } from "./card/game-list-card/game-list-card.component";
@@ -12,6 +14,7 @@ import { NotFoundComponent } from "./general/not-found/not-found.component";
 import { ButtonRefrestComponent } from "./general/button/button-refrest/button-refrest.component";
 import { ButtonOkComponent } from "./general/button/button-ok/button-ok.component";
 import { ButtonBadComponent } from "./general/button/button-bad/button-bad.component";
+import { VoidComponent } from "./general/void/void.component";
 const declarations = [
   GameCardComponent,
   GameListCardComponent,
@@ -23,11 +26,12 @@ const declarations = [
   ButtonRefrestComponent,
   ButtonOkComponent,
   ButtonBadComponent,
+  VoidComponent,
 ];
 
 @NgModule({
   declarations: [...declarations],
-  imports: [CommonModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [CommonModule, PipesModule, ReactiveFormsModule, AppRoutingModule],
   exports: [...declarations],
 })
 export class ComponentsModule {}
