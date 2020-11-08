@@ -119,6 +119,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-aventura-con-las-matematicas"
+    }
+  },
+  "defaultProject": "app-aventura-con-las-matematicas",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

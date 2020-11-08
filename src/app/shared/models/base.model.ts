@@ -1,2 +1,6 @@
-export class Base {
+export class BaseModel {
+  public id?: string;
+  public create_at?: Date;
+  public update_at?: Date;
+  public delete_at?: Date;
 }
