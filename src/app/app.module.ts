@@ -2,10 +2,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
-import { ModulesModule } from "./modules/modules.module";
+import { PageModule } from "./page/page.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
-import { ComponentsModule } from "./modules/components/components.module";
+import { ComponentsModule } from "./components/components.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +13,7 @@ import { ComponentsModule } from "./modules/components/components.module";
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ModulesModule,
+    PageModule,
     ComponentsModule,
   ],
   providers: [],

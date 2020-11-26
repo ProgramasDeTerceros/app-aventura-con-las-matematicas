@@ -15,6 +15,8 @@ import { ButtonRefrestComponent } from "./general/button/button-refrest/button-r
 import { ButtonOkComponent } from "./general/button/button-ok/button-ok.component";
 import { ButtonBadComponent } from "./general/button/button-bad/button-bad.component";
 import { VoidComponent } from "./general/void/void.component";
+import { Game1Component } from "./game/game1/game1.component";
+import { Activity1Component } from "./activity/activity1/activity1.component";
 const declarations = [
   GameCardComponent,
   GameListCardComponent,
@@ -27,6 +29,8 @@ const declarations = [
   ButtonOkComponent,
   ButtonBadComponent,
   VoidComponent,
+  Game1Component,
+  Activity1Component,
 ];
 
 @NgModule({
