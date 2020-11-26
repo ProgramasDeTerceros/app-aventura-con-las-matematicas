@@ -1,6 +1,6 @@
 <app-loading *ngIf="!data">
 </app-loading>
-<app-void *ngIf="data && data.length == 0" [nombre]="'productos'"></app-void>
+<app-void *ngIf="data && data.length == 0" [nombre]="'Juegos'"></app-void>
 <div class="card-columns">
     <app-game-card *ngFor="let dat of data" [data]="dat"></app-game-card>
 </div>

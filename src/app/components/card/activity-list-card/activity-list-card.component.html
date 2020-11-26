@@ -1,0 +1,6 @@
+<app-loading *ngIf="!data">
+</app-loading>
+<app-void *ngIf="data && data.length == 0" [nombre]="'Actividades'"></app-void>
+<div class="card-columns">
+    <app-activity-card *ngFor="let dat of data" [data]="dat"></app-activity-card>
+</div>
