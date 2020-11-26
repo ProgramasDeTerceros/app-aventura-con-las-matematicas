@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { GameListCardComponent } from "./components/card/game-list-card/game-list-card.component";
 import { ActivityListComponent } from "./page/activity-list/activity-list.component";
 import { ActivityComponent } from "./page/activity/activity.component";
+import { GameListComponent } from "./page/game-list/game-list.component";
 import { GameComponent } from "./page/game/game.component";
 import { HomeComponent } from "./page/home/home.component";
 
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: "actividad/:id", component: ActivityComponent },
 
   /* juegos */
-  { path: "juego", component: GameListCardComponent },
+  { path: "juego", component: GameListComponent },
   { path: "juego/:id", component: GameComponent },
 
   /* default */

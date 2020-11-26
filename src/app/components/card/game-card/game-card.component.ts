@@ -5,7 +5,7 @@ import { GameModel } from "src/app/shared/models/game.model";
 @Component({
   selector: "app-game-card",
   templateUrl: "./game-card.component.html",
-  styleUrls: ["./game-card.component.css"],
+  styleUrls: ["./game-card.component.scss"],
 })
 export class GameCardComponent implements OnInit {
   @Input() data: GameModel;
@@ -16,7 +16,7 @@ export class GameCardComponent implements OnInit {
     if (!url || url == "") {
       return;
     }
-    console.log(url)
+    console.log(url);
     this._router.navigate([url]);
   }
 }
