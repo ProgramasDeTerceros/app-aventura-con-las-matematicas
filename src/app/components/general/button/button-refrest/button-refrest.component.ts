@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-button-refrest',
-  templateUrl: './button-refrest.component.html',
-  styleUrls: ['./button-refrest.component.css']
+  selector: "app-button-refrest",
+  templateUrl: "./button-refrest.component.html",
+  styleUrls: ["./button-refrest.component.scss"],
 })
 export class ButtonRefrestComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

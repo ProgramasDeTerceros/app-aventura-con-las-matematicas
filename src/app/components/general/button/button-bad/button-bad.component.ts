@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-button-bad',
-  templateUrl: './button-bad.component.html',
-  styleUrls: ['./button-bad.component.css']
+  selector: "app-button-bad",
+  templateUrl: "./button-bad.component.html",
+  styleUrls: ["./button-bad.component.scss"],
 })
 export class ButtonBadComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
