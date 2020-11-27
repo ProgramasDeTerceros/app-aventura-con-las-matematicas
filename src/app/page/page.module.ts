@@ -7,6 +7,8 @@ import { GameComponent } from "./game/game.component";
 import { ActivityComponent } from "./activity/activity.component";
 import { ActivityListComponent } from "./activity-list/activity-list.component";
 import { GameListComponent } from "./game-list/game-list.component";
+import { Game1Component } from "./game/game1/game1.component";
+import { Activity1Component } from "./activity/activity1/activity1.component";
 
 const declarations = [
   HomeComponent,
@@ -14,6 +16,8 @@ const declarations = [
   ActivityListComponent,
   GameComponent,
   GameListComponent,
+  Game1Component,
+  Activity1Component,
 ];
 
 @NgModule({

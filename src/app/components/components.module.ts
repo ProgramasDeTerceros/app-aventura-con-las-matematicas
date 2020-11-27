@@ -15,8 +15,6 @@ import { ButtonRefrestComponent } from "./general/button/button-refrest/button-r
 import { ButtonOkComponent } from "./general/button/button-ok/button-ok.component";
 import { ButtonBadComponent } from "./general/button/button-bad/button-bad.component";
 import { VoidComponent } from "./general/void/void.component";
-import { Game1Component } from "./game/game1/game1.component";
-import { Activity1Component } from "./activity/activity1/activity1.component";
 import { ActivityCardComponent } from "./card/activity-card/activity-card.component";
 import { ActivityListCardComponent } from "./card/activity-list-card/activity-list-card.component";
 const declarations = [
@@ -33,12 +31,10 @@ const declarations = [
   VoidComponent,
   ActivityCardComponent,
   ActivityListCardComponent,
-  Game1Component,
-  Activity1Component,
 ];
 
 @NgModule({
-  declarations: [...declarations, ,],
+  declarations: [...declarations],
   imports: [CommonModule, PipesModule, ReactiveFormsModule, AppRoutingModule],
   exports: [...declarations],
 })

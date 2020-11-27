@@ -11,7 +11,10 @@ const routes: Routes = [
 
   /* actividad */
   { path: "actividad", component: ActivityListComponent },
-  { path: "actividad/:id", component: ActivityComponent },
+  {
+    path: "actividad/:id",
+    component: ActivityComponent,
+  },
 
   /* juegos */
   { path: "juego", component: GameListComponent },
@@ -22,7 +25,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: true,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

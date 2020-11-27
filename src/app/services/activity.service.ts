@@ -12,57 +12,68 @@ export class ActivityService {
       name: "activity1",
       description: "actividad para 1",
       img: "",
-      url: "/actividad/1",
+      id: "1",
     },
     {
       name: "activity2",
       description: "actividad para 2",
       img: "",
-      url: "/actividad/2",
+      id: "2",
     },
     {
       name: "activity3",
       description: "actividad para 3",
       img: "",
-      url: "/actividad/3",
+      id: "3",
     },
     {
       name: "activity4",
       description: "actividad para 4",
       img: "",
-      url: "/actividad/4",
+      id: "4",
     },
     {
       name: "activity5",
       description: "actividad para 5",
       img: "",
-      url: "/actividad/5",
+      id: "5",
     },
     {
       name: "activity6",
       description: "actividad para 6",
       img: "",
-      url: "/actividad/6",
+      id: "6",
     },
     {
       name: "activity7",
       description: "actividad para 7",
       img: "",
-      url: "/actividad/7",
+      id: "7",
     },
     {
       name: "activity8",
       description: "actividad para 8",
       img: "",
-      url: "/actividad/8",
+      id: "8",
     },
   ];
   constructor() {}
 
-  getList(): Observable<any[]> {
-    const obs: Observable<any[]> = new Observable((res) =>
+  getList(): Observable<ActivityModel[]> {
+    const obs: Observable<ActivityModel[]> = new Observable((res) =>
       res.next(this.activity)
     );
     return obs.pipe(take(1));
+  }
+
+  get(id: string): Observable<ActivityModel> {
+    const obs: Observable<ActivityModel> = new Observable((res) =>
+      res.next(this.activity.find((resp) => resp.id == id))
+    );
+    return obs.pipe(take(1));
+  }
+
+  geturl(path: string) {
+    return "/actividad/" + path;
   }
 }

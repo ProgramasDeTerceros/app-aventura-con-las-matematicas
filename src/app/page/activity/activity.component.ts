@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { ActivityService } from "src/app/services/activity.service";
+import { ActivityModel } from "src/app/shared/models/activity.model";
 
 @Component({
   selector: "app-activity",
@@ -6,7 +9,17 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./activity.component.scss"],
 })
 export class ActivityComponent implements OnInit {
-  constructor() {}
+  public activty: ActivityModel;
+  constructor(
+    private _routeActive: ActivatedRoute,
+    private _activityService: ActivityService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._routeActive.params.subscribe((params) => {
+      this._activityService.get(params.id).subscribe((resp) => {
+        this.activty = resp;
+      });
+    });
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { GameService } from "src/app/services/game.service";
 import { GameModel } from "src/app/shared/models/game.model";
 
 @Component({
@@ -9,7 +10,7 @@ import { GameModel } from "src/app/shared/models/game.model";
 })
 export class GameCardComponent implements OnInit {
   @Input() data: GameModel;
-  constructor(private _router: Router) {}
+  constructor(private _router: Router, private _gameService: GameService) {}
 
   ngOnInit(): void {}
   public cargar(url: string) {
@@ -17,6 +18,6 @@ export class GameCardComponent implements OnInit {
       return;
     }
     console.log(url);
-    this._router.navigate([url]);
+    this._router.navigate([this._gameService.geturl(url)]);
   }
 }
