@@ -34,4 +34,7 @@ export class GameService {
   geturl(path: string) {
     return "/juego/" + path;
   }
+  getByUrl(url: string) {
+    return this.get(url.split("/")[2]);
+  }
 }

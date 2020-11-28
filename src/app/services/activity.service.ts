@@ -76,4 +76,8 @@ export class ActivityService {
   geturl(path: string) {
     return "/actividad/" + path;
   }
+
+  getByUrl(url: string) {
+    return this.get(url.split("/")[2]);
+  }
 }

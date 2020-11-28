@@ -16,10 +16,12 @@ export class GameComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._routeActive.params.subscribe((params) => {
-      this._gameervice.get(params.id).subscribe((resp) => {
-        this.game = resp;
-      });
+    let url = this._routeActive.pathFromRoot[0]["_futureSnapshot"]._routerState
+      .url;
+    //this._routeActive.params.subscribe(({id}) => {
+    this._gameervice.getByUrl(url).subscribe((resp) => {
+      this.game = resp;
     });
+    //});
   }
 }

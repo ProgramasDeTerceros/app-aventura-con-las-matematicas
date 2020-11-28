@@ -10,7 +10,7 @@ import { GameModel } from "src/app/shared/models/game.model";
 export class GameListComponent implements OnInit {
   public games: GameModel[] = [];
   constructor(private _gameService: GameService) {
-    console.log("dd");
+    // console.log("dd");
   }
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class GameListComponent implements OnInit {
 
   getData() {
     this._gameService.getList().subscribe((resp) => {
-      console.log({ resp });
+      // console.log({ resp });
       this.games = resp;
     });
   }

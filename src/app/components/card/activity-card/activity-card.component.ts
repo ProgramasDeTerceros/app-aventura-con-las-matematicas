@@ -20,7 +20,7 @@ export class ActivityCardComponent implements OnInit {
     if (!url || url == "") {
       return;
     }
-    console.log(url);
+    // console.log(url);
     this._router.navigate([this._activityService.geturl(url)]);
   }
 }

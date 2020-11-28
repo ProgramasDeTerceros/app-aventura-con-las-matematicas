@@ -16,10 +16,13 @@ export class ActivityComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._routeActive.params.subscribe((params) => {
-      this._activityService.get(params.id).subscribe((resp) => {
-        this.activty = resp;
-      });
+    let url = this._routeActive.pathFromRoot[0]["_futureSnapshot"]._routerState
+      .url;
+
+    //this._routeActive.params.subscribe(({id}) => {
+    this._activityService.getByUrl(url).subscribe((resp) => {
+      this.activty = resp;
     });
+    //});
   }
 }

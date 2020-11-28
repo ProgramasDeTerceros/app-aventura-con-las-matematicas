@@ -9,6 +9,7 @@ import { ActivityListComponent } from "./activity-list/activity-list.component";
 import { GameListComponent } from "./game-list/game-list.component";
 import { Game1Component } from "./game/game1/game1.component";
 import { Activity1Component } from "./activity/activity1/activity1.component";
+import { AppRoutingModule } from "../app-routing.module";
 
 const declarations = [
   HomeComponent,
@@ -22,7 +23,7 @@ const declarations = [
 
 @NgModule({
   declarations: [...declarations],
-  imports: [CommonModule, ComponentsModule],
+  imports: [CommonModule, ComponentsModule, AppRoutingModule],
   exports: [...declarations],
 })
 export class PageModule {}

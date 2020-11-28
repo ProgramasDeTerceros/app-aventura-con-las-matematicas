@@ -17,7 +17,7 @@ export class GameCardComponent implements OnInit {
     if (!url || url == "") {
       return;
     }
-    console.log(url);
+    // console.log(url);
     this._router.navigate([this._gameService.geturl(url)]);
   }
 }
