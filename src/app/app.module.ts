@@ -6,7 +6,6 @@ import { PageModule } from "./page/page.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ComponentsModule } from "./components/components.module";
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

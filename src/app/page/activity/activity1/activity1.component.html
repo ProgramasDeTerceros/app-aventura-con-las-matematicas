@@ -1,1 +1,6 @@
 <p>activity1 works!</p>
+<div class="group-card">
+    <div *ngFor="let card of cards">
+        <app-card-turn [card]="card"></app-card-turn>
+    </div>
+</div>

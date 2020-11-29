@@ -17,6 +17,7 @@ import { ButtonBadComponent } from "./general/button/button-bad/button-bad.compo
 import { VoidComponent } from "./general/void/void.component";
 import { ActivityCardComponent } from "./card/activity-card/activity-card.component";
 import { ActivityListCardComponent } from "./card/activity-list-card/activity-list-card.component";
+import { CardTurnComponent } from "./card/card-turn/card-turn.component";
 const declarations = [
   GameCardComponent,
   GameListCardComponent,
@@ -31,11 +32,18 @@ const declarations = [
   VoidComponent,
   ActivityCardComponent,
   ActivityListCardComponent,
+  CardTurnComponent,
 ];
 
 @NgModule({
   declarations: [...declarations],
-  imports: [CommonModule, PipesModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    CommonModule,
+    PipesModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    PipesModule,
+  ],
   exports: [...declarations],
 })
 export class ComponentsModule {}
