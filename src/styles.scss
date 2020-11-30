@@ -16,3 +16,18 @@ html {
     min-height: 50vh;
     padding: 1rem;
 }
+
+.group-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabezera {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+}

@@ -11,7 +11,7 @@ export class CardTurnComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.card) {
-      this.card = { valor: "" };
+      this.card = { value: "" };
     }
     if (!this.card.img_pos) {
       this.card.img_pos = "./assets/img/cardFondo.jpg";

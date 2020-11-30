@@ -1,14 +1,13 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { GeneratorCardsService } from "src/app/services/generator-cards.service";
 import { CardTurnModel } from "src/app/shared/models/card-turn.model";
 
-import { GeneratorCardsService } from "src/app/services/generator-cards.service";
-import { generate } from "rxjs";
 @Component({
-  selector: "app-activity1",
-  templateUrl: "./activity1.component.html",
-  styleUrls: ["./activity1.component.scss"],
+  selector: "app-activity2",
+  templateUrl: "./activity2.component.html",
+  styleUrls: ["./activity2.component.scss"],
 })
-export class Activity1Component implements OnInit {
+export class Activity2Component implements OnInit {
   public cards: CardTurnModel[];
   constructor(private _generateCardService: GeneratorCardsService) {}
 
@@ -17,7 +16,7 @@ export class Activity1Component implements OnInit {
   }
 
   GenerarCartas() {
-    this.cards = this._generateCardService.GenerarSuma(3, 0, 9);
+    this.cards = this._generateCardService.GenerarSuma(3, 0, 100);
     //this.cards.push({ value: "1", datos: "55", actived: true });
   }
 

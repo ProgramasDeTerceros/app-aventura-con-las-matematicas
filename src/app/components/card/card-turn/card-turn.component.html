@@ -1,12 +1,12 @@
 <div class="carta-box">
-    <div [ngClass]="{'carta': card && card.valor != ''}">
-        <div class="cara" *ngIf="card && card.valor != ''">
+    <div [ngClass]="{'carta': card && !card.ok && !card.actived }">
+        <div class="cara" *ngIf="card && !card.ok && !card.actived ">
             <div class="contenido">
                 <img [src]="card.img_pos | images">
             </div>
         </div>
-        <div [ngClass]="{'cara detras': card && card.valor != '' }">
-            <div class="contenido" [ngClass]="{'carta-ok':card! && card.valor == ''}">
+        <div [ngClass]="{'cara detras': card && !card.ok && !card.actived}">
+            <div class="contenido" [ngClass]="{'carta-ok':card! && (card.ok),'carta-active':card! &&  card.actived}">
                 {{card.datos}}
                 <!-- <img src="http://wiki.vykar.com/skins/common/images/2000px-Playing_card_spade_A_svg.png"> -->
             </div>

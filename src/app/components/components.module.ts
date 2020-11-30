@@ -18,6 +18,7 @@ import { VoidComponent } from "./general/void/void.component";
 import { ActivityCardComponent } from "./card/activity-card/activity-card.component";
 import { ActivityListCardComponent } from "./card/activity-list-card/activity-list-card.component";
 import { CardTurnComponent } from "./card/card-turn/card-turn.component";
+import { ButtonResetComponent } from "./general/button/button-reset/button-reset.component";
 const declarations = [
   GameCardComponent,
   GameListCardComponent,
@@ -33,6 +34,7 @@ const declarations = [
   ActivityCardComponent,
   ActivityListCardComponent,
   CardTurnComponent,
+  ButtonResetComponent,
 ];
 
 @NgModule({

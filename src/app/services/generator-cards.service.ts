@@ -14,14 +14,25 @@ export class GeneratorCardsService {
     accion: string = "+",
     hasta: number = 9,
     desde: number = 0,
+    limit: number,
     float: number = 0
   ): CardTurnModel[] {
-    const a: number = Number(
+    let a: number = Number(
       parseFloat("" + this.getRandomArbitrary(desde, hasta)).toFixed(float)
     );
-    const b: number = Number(
+    if (accion == "+" && a + hasta > limit) {
+      hasta = limit - a;
+    }
+    let b: number = Number(
       parseFloat("" + this.getRandomArbitrary(desde, hasta)).toFixed(float)
     );
+    if (accion == "-") {
+      if (b > a) {
+        const r = a;
+        a = b;
+        b = r;
+      }
+    }
     const c: string = parseFloat(
       String(
         accion == "+"
@@ -41,14 +52,16 @@ export class GeneratorCardsService {
     const ab: string = a + accion + b;
 
     return [
-      { valor: c, datos: c },
-      { valor: c, datos: ab },
+      { value: c, datos: c },
+      { value: c, datos: ab },
     ];
   }
+
   public GenerarSuma(
     catidad = 4,
     desde = 0,
     hasta = 9,
+    limit = 100,
     float = 0
   ): CardTurnModel[] {
     let cards: CardTurnModel[] = [];
@@ -57,6 +70,28 @@ export class GeneratorCardsService {
         "+",
         hasta,
         desde,
+        limit,
+        float
+      );
+      cards.push(...tempcard);
+    }
+    return cards.sort(() => Math.random() - 0.5);
+  }
+
+  public GenerarResta(
+    catidad = 4,
+    desde = 0,
+    hasta = 9,
+    limit = 100,
+    float = 0
+  ): CardTurnModel[] {
+    let cards: CardTurnModel[] = [];
+    for (let i = 0; i <= catidad; i++) {
+      const tempcard: CardTurnModel[] = this.GenerateCouple(
+        "-",
+        hasta,
+        desde,
+        limit,
         float
       );
       cards.push(...tempcard);
