@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { GeneratorCardsService } from "src/app/services/generator-cards.service";
 import { CardTurnModel } from "src/app/shared/models/card-turn.model";
 
@@ -9,7 +10,14 @@ import { CardTurnModel } from "src/app/shared/models/card-turn.model";
 })
 export class Activity4Component implements OnInit {
   public cards: CardTurnModel[];
-  constructor(private _generateCardService: GeneratorCardsService) {}
+  constructor(
+    private _generateCardService: GeneratorCardsService,
+    private _router: Router
+  ) {}
+
+  oldpage() {
+    this._router.navigateByUrl("/actividades");
+  }
 
   ngOnInit(): void {
     this.GenerarCartas();

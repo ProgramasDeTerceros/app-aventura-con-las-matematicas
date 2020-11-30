@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-button-bad",
@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./button-bad.component.scss"],
 })
 export class ButtonBadComponent implements OnInit {
+  @Input() texto: string = "danger";
   constructor() {}
 
   ngOnInit(): void {}

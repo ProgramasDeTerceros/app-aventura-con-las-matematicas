@@ -1,6 +1,7 @@
 <div class="cabezera">
     <app-button-reset (click)="GenerarCartas()"></app-button-reset>
     <!-- <p>Puntacion: <span> 15</span></p> -->
+    <app-button-bad [texto]="'regresar'" (click)="oldpage()"></app-button-bad>
 </div>
 <div class="group-card">
     <div *ngFor="let card of cards;let i = index;">

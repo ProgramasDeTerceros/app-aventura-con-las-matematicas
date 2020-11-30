@@ -3,6 +3,7 @@ import { CardTurnModel } from "src/app/shared/models/card-turn.model";
 
 import { GeneratorCardsService } from "src/app/services/generator-cards.service";
 import { generate } from "rxjs";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-activity1",
   templateUrl: "./activity1.component.html",
@@ -10,8 +11,14 @@ import { generate } from "rxjs";
 })
 export class Activity1Component implements OnInit {
   public cards: CardTurnModel[];
-  constructor(private _generateCardService: GeneratorCardsService) {}
+  constructor(
+    private _generateCardService: GeneratorCardsService,
+    private _router: Router
+  ) {}
 
+  oldpage() {
+    this._router.navigateByUrl("/actividades");
+  }
   ngOnInit(): void {
     this.GenerarCartas();
   }
